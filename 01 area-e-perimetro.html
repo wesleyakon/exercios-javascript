@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade01</title>
+    <link rel="stylesheet" href="somar.css">
+    <link rel="stylesheet" href="reset.css">
+    <script>
+        function clicar() {
+    var altura = document.querySelector(".altura").value;
+    var base = document.querySelector(".base").value;
+
+    var resultado = parseInt(altura) * parseInt(base) / 2;
+    document.querySelector(".resultado").innerHTML = resultado;
+
+    var resultado = (parseInt(altura) * parseInt(altura)) + (parseInt(base) * parseInt(base));
+    var raiz = Math.sqrt(resultado)
+    var perimetro = parseInt(altura) + parseInt(base) + raiz;
+    document.querySelector(".resultado2").innerHTML = perimetro;
+
+
+}
+    </script>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="conteiner">
+            <h1 id="titulo"> Dado o tamanho da base e da altura <br>
+                 de um retângulo, calcular a sua área e o seu
+                perímetro.</h1>
+            <input class="altura" type="text" placeholder="digite a altura"><br><br>
+            <input class="base" type="number" placeholder="digite a base"><br><br>
+            <button onclick="clicar()">Resultado</button>
+            <p>Area do retangulo</p>
+            <p class="resultado"></p>
+            <p>perimetro do retangulo</p>
+            <p class="resultado2"></p>
+        </div>
+    </section>
+
+</body>
+
+</html>
